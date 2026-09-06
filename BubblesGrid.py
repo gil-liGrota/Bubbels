@@ -194,3 +194,9 @@ def find_bubble_location_in_grid(bullet_bubble):
 
     return min_bubble
 
+def is_grid_empty():
+    for row in range(len(bubbles_grid)):
+        for col in range(consts.BUBBLE_GRID_COLS):
+            if bubbles_grid[row][col]["color"] != consts.NO_BUBBLE:
+                return False
+    return True
