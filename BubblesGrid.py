@@ -190,6 +190,7 @@ def find_bubble_location_in_grid(bullet_bubble):
        for bubble in range(consts.BUBBLE_GRID_COLS):
            if bubbles_grid[row][bubble]["color"] == consts.NO_BUBBLE:
                if Bubble.get_distance(bubbles_grid[row][bubble], bullet_bubble) < min_distance:
+                       # and not Bubble.is_isolated(bubbles_grid, (row, bubble))):
                    min_distance = Bubble.get_distance(bubbles_grid[row][bubble],bullet_bubble)
                    min_bubble = (row, bubble)
    return min_bubble

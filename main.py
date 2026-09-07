@@ -63,7 +63,7 @@ def main():
                         state["turns_left_to_add_row"] = \
                             consts.NUM_OF_TURNS_TO_ADD_ROW
 
-                # remove_isolated_bubbles() #TODO remove #
+                remove_isolated_bubbles() #TODO remove #
                 BubblesGrid.set_one_empty_line()
                 remove_extinct_colors(consts.bubble_colors)
                 Stack.add_bubble(Stack.get_length())
