@@ -134,14 +134,14 @@ def remove_extinct_colors(bubble_colors):
 
 # TODO: implement
 def is_lose():
-    if BubblesGrid.get_length() >=  consts.NUM_OF_LINES_LOSE:
-        return True
-    return False
-
+   if BubblesGrid.get_length() >=  consts.NUM_OF_LINES_LOSE:
+       return True
+   return False
 
 # TODO: implement
 def is_win(): #TODO when finish: check this
-    return BubblesGrid.is_grid_empty()
+   return BubblesGrid.is_grid_empty()
+
 
 
 # -----------------------------------------------------------------------------

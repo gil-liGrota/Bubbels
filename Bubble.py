@@ -87,17 +87,17 @@ def is_isolated_inner(bubbles_grid, bubble_location, locations_checked):
 
 # TODO: implement
 def should_stop(bubbles_grid, bullet_bubble):
-    for row_in_grid in bubbles_grid:
-        for bubble in row_in_grid:
-            if bullet_bubble["color"] != consts.NO_BUBBLE:
-                if get_distance(bubble, bullet_bubble) <= consts.BUBBLE_RADIUS:
-                    return True
+   for row_in_grid in bubbles_grid:
+       for bubble in row_in_grid:
+           if bullet_bubble["color"] != consts.NO_BUBBLE:
+               if get_distance(bubble, bullet_bubble) <= consts.BUBBLE_RADIUS:
+                   return True
+   if bullet_bubble["center_y"] <= consts.BUBBLE_RADIUS:
+       return True
 
 
-    if consts.WINDOW_HEIGHT - consts.BUBBLE_RADIUS < bullet_bubble["center_y"]: #FIXME if its get to the top it wont stop
-        return True
+   return False
 
-    return False
 
 def get_distance(bubble, bullet_bubble):
-    return math.sqrt((bubble["center_x"] - bullet_bubble["center_x"]) ** 2 + (bubble["center_y"] - bullet_bubble["center_y"]) ** 2)
+   return math.sqrt(math.pow((bubble["center_x"] - bullet_bubble["center_x"]),2) + math.pow((bubble["center_y"] - bullet_bubble["center_y"]), 2))
