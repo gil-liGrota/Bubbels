@@ -131,7 +131,7 @@ def remove_isolated_bubbles():
 def remove_extinct_colors(bubble_colors):
     if BubblesGrid.is_color_out_of_grid(bubble_colors):
         if Stack.is_bubble_in_stack(bubble_colors):
-            consts.BUBBLE_START_COLORS.remove(bubble_colors)
+            consts.BUBBLE_START_COLORS.remove(bubble_colors)  # TODO remove single colors, use a a copy of start colors
 
 # TODO: implement
 def is_lose():
