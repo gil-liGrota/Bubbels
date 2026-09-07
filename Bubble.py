@@ -89,7 +89,7 @@ def is_isolated_inner(bubbles_grid, bubble_location, locations_checked):
 def should_stop(bubbles_grid, bullet_bubble):
    for row_in_grid in bubbles_grid:
        for bubble in row_in_grid:
-           if bullet_bubble["color"] != consts.NO_BUBBLE:
+           if bubble["color"] != consts.NO_BUBBLE:
                if get_distance(bubble, bullet_bubble) <= consts.BUBBLE_RADIUS:
                    return True
    if bullet_bubble["center_y"] <= consts.BUBBLE_RADIUS:

@@ -183,7 +183,8 @@ def find_isolated_bubbles():
 
 # TODO: implement
 def find_bubble_location_in_grid(bullet_bubble):
-   min_distance = get_length() * (consts.BUBBLE_RADIUS  * 2 + consts.SPACE_BETWEEN_COLS)
+   # min_distance = get_length() * (consts.BUBBLE_RADIUS  * 2 + consts.SPACE_BETWEEN_COLS)
+   min_distance = 400
    min_bubble = (-1,-1)
 
    for row in range(get_length()):
