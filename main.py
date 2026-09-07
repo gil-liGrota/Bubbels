@@ -63,7 +63,7 @@ def main():
                         state["turns_left_to_add_row"] = \
                             consts.NUM_OF_TURNS_TO_ADD_ROW
 
-                remove_isolated_bubbles()
+                # remove_isolated_bubbles() #TODO remove #
                 BubblesGrid.set_one_empty_line()
                 remove_extinct_colors(consts.bubble_colors)
                 Stack.add_bubble(Stack.get_length())
@@ -127,21 +127,22 @@ def remove_isolated_bubbles():
 # ---------------------------------your code-----------------------------------
 # -----------------------------------------------------------------------------
 
+# TODO: implement
 def remove_extinct_colors(bubble_colors):
-    # TODO: implement
-    pass
-
+    if BubblesGrid.is_color_out_of_grid(bubble_colors):
+        if Stack.is_bubble_in_stack(bubble_colors):
+            consts.BUBBLE_START_COLORS.remove(bubble_colors)
 
 # TODO: implement
 def is_lose():
-   if BubblesGrid.get_length() >=  consts.NUM_OF_LINES_LOSE:
-       return True
-   return False
+    if BubblesGrid.get_length() >= consts.NUM_OF_LINES_LOSE:
+        return True
+    return False
+
 
 # TODO: implement
-def is_win(): #TODO when finish: check this
-   return BubblesGrid.is_grid_empty()
-
+def is_win():  # TODO when finish: check this
+    return BubblesGrid.is_grid_empty()
 
 
 # -----------------------------------------------------------------------------

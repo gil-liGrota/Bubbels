@@ -44,4 +44,9 @@ def draw():
 # ---------------------------------your code-----------------------------------
 # -----------------------------------------------------------------------------
 
+def is_bubble_in_stack(bubble_color):
+    for bubble in stack:
+        if bubble["color"] == bubble_color:
+            return True
+    return False
 
