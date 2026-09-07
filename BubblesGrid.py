@@ -195,6 +195,7 @@ def find_bubble_location_in_grid(bullet_bubble):
                    min_bubble = (row, bubble)
    return min_bubble
 
+
 def is_grid_empty():
    for row in range(len(bubbles_grid)):
        for col in range(consts.BUBBLE_GRID_COLS):
